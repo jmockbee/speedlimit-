@@ -10,6 +10,14 @@ namespace speeding
     {
         static void Main(string[] args)
         {
+            Console.Write("What is the speed limit? ");
+            var speedLimit = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("What is the speed of this car? ");
+            var carSpeed = Convert.ToInt32(Console.ReadLine());
+
+            if (carSpeed < speedLimit)
+                Console.WriteLine("Ok");
         }
     }
 }

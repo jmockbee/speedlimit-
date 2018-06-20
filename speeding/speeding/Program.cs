@@ -18,6 +18,15 @@ namespace speeding
 
             if (carSpeed < speedLimit)
                 Console.WriteLine("Ok");
+            else
+            {
+                const int kmPerDemeritPoint = 5;
+                var demeritPoints = (carSpeed - speedLimit) / kmPerDemeritPoint;
+                if (demeritPoints > 12)
+                    Console.WriteLine("License Suspended");
+                else
+                    Console.WriteLine("Demerit points: " + demeritPoints);
+            }
         }
     }
 }
